@@ -1,31 +1,78 @@
 body {
+  background: linear-gradient(to bottom, #87ceeb, #f0e68c);
   font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(to bottom, #a2d2ff, #ffffff);
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.125rem;
 }
 
-#game {
-  max-width: 600px;
-  margin: auto;
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
-#choices button {
+h1, h2 {
+  text-align: center;
+  color: #4b0082;
+  margin-bottom: 1rem;
+}
+
+button {
   display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background: #ffb703;
-  border: none;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 1em auto;
+  padding: 0.75em 1em;
+  font-size: 1em;
   font-weight: bold;
+  color: #fff;
+  background-color: #4b0082;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#choices button:hover {
-  background: #fb8500;
+button:hover {
+  background-color: #6a0dad;
+}
+
+input[type="text"] {
+  padding: 0.6em;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+.choice {
+  margin-top: 1em;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1em;
+    border-radius: 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 1rem;
+  }
 }

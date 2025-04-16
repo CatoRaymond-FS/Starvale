@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Starvale: The Adventure Begins</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starvale: A Story Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="game">
-    <div id="story"></div>
-    <div id="choices"></div>
+  <div class="container">
+
+   <div id="intro">
+  <h1>Welcome to Starvale</h1>
+  <p>Enter your name to begin your adventure!</p>
+  <input type="text" id="playerName1" placeholder="Your Name" />
+  <button onclick="startGame()">Start Game</button>
+</div>
+
+    <div id="story" style="display:none;">
+      <h2 id="scene-title"></h2>
+      <p id="scene-text"></p>
+      <div id="choices"></div>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

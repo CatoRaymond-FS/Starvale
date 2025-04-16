@@ -1,29 +1,22 @@
 const storyEl = document.getElementById('story');
 const choicesEl = document.getElementById('choices');
+const sceneTitleEl = document.getElementById('scene-title');
+const sceneTextEl = document.getElementById('scene-text');
 
 let playerName = '';
 let playerType = '';
 
 function startGame() {
-  storyEl.innerHTML = `
-    <p>Welcome to Starvale! What’s your name, brave hero?</p>
-    <input type="text" id="nameInput" placeholder="Enter your name">
-  `;
-  choicesEl.innerHTML = '';
+  document.getElementById('intro').style.display = 'none';
+  storyEl.style.display = 'block';
 
-  const startButton = document.createElement('button');
-  startButton.textContent = 'Next';
-  startButton.onclick = () => {
-    const input = document.getElementById('nameInput');
-    playerName = input.value.trim() || "Hero";
-    showCharacterTypeChoice();
-  };
-
-  choicesEl.appendChild(startButton);
+  playerName = document.getElementById('playerName1').value.trim() || "Hero";
+  showCharacterTypeChoice();
 }
 
 function showCharacterTypeChoice() {
-  storyEl.innerHTML = `<p>Nice to meet you, ${playerName}! What kind of hero are you?</p>`;
+  sceneTitleEl.textContent = "Choose Your Hero Type";
+  sceneTextEl.textContent = `Nice to meet you, ${playerName}! What kind of hero are you?`;
   choicesEl.innerHTML = '';
 
   const types = [
@@ -114,14 +107,14 @@ const scenes = {
 
 function renderScene(sceneKey) {
   const scene = scenes[sceneKey];
-  storyEl.textContent = scene.text
+  sceneTitleEl.textContent = '';
+  sceneTextEl.textContent = scene.text
     .replaceAll('{name}', playerName)
     .replaceAll('{type}', playerType);
 
   choicesEl.innerHTML = '';
 
   scene.choices.forEach(choice => {
-    // If the choice has a type requirement and player doesn't match, skip
     if (choice.type && choice.type !== playerType) return;
 
     const button = document.createElement('button');
@@ -130,5 +123,3 @@ function renderScene(sceneKey) {
     choicesEl.appendChild(button);
   });
 }
-
-startGame();
