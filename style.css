@@ -1,0 +1,31 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to bottom, #a2d2ff, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+#game {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#choices button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffb703;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#choices button:hover {
+  background: #fb8500;
+}
