@@ -1,11 +1,12 @@
 body {
-  background: linear-gradient(to bottom, #87ceeb, #f0e68c);
+  background: linear-gradient(to bottom, #ffccff, #ccffff); /* Candy jungle vibes */
   font-family: 'Fredoka', sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   font-size: 1.125rem;
+  min-height: 100vh;
 }
 
 .container {
@@ -14,12 +15,18 @@ body {
   padding: 1.5em;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#intro, #story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 h1, h2 {
-  text-align: center;
-  color: #4b0082;
+  color: #e75480; /* Bright candy pink */
   margin-bottom: 1rem;
 }
 
@@ -32,21 +39,23 @@ button {
   font-size: 1em;
   font-weight: bold;
   color: #fff;
-  background-color: #4b0082;
+  background-color: #e75480;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 button:hover {
-  background-color: #6a0dad;
+  background-color: #ff6fa1;
 }
 
 input[type="text"] {
   padding: 0.6em;
   font-size: 1em;
   width: 100%;
+  max-width: 300px;
   margin-top: 1em;
   border-radius: 10px;
   border: 1px solid #aaa;

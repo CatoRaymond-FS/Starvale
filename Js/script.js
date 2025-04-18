@@ -1,7 +1,9 @@
+// Elements for intro and character creation
 const storyEl = document.getElementById('story');
 const choicesEl = document.getElementById('choices');
 const sceneTitleEl = document.getElementById('scene-title');
 const sceneTextEl = document.getElementById('scene-text');
+const backButton = document.getElementById('backButton'); // Reference to the back button
 
 let playerName = '';
 let playerType = '';
@@ -9,6 +11,9 @@ let playerType = '';
 function startGame() {
   document.getElementById('intro').style.display = 'none';
   storyEl.style.display = 'block';
+
+  // Reset back button visibility
+  backButton.style.display = 'none';
 
   playerName = document.getElementById('playerName1').value.trim() || "Hero";
   showCharacterTypeChoice();
@@ -122,4 +127,11 @@ function renderScene(sceneKey) {
     button.onclick = () => renderScene(choice.nextScene);
     choicesEl.appendChild(button);
   });
+
+  // Show "Back to Landing" button only when the "Play again" button is shown
+  if (sceneKey === 'jellyGem' || sceneKey === 'end') {
+    backButton.style.display = 'inline-block';
+  } else {
+    backButton.style.display = 'none';
+  }
 }

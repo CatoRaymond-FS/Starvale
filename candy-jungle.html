@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starvale: Candy Jungle Mystery</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Optional transition enhancement */
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="intro">
+      <h1>Starvale: Candy Jungle Mystery!</h1>
+      <p>Enter your name to begin your adventure!</p>
+      <input type="text" id="playerName1" placeholder="Your Name" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="story" style="display:none;" class="fade-in">
+      <h2 id="scene-title"></h2>
+      <p id="scene-text"></p>
+      <div id="choices"></div>
+      <!-- Add the button to return to the landing page -->
+      <button id="backButton" style="display:none;" onclick="goBackToIntro()">Back to Landing</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to go back to the landing page (navigate to a different HTML page)
+    function goBackToIntro() {
+      window.location.href = 'index.html'; // Navigate to a different page (e.g., landing.html)
+    }
+  </script>
+
+  <script src="Js/script.js"></script>
+</body>
+</html>

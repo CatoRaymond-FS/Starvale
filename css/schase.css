@@ -1,0 +1,91 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: radial-gradient(circle, #0a0f2c 0%, #000000 100%);
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #7cf2ff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #00ffe0;
+  font-weight: 600;
+}
+
+input[type="text"],
+select {
+  font-family: 'Fredoka', sans-serif;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 0.5rem;
+  width: 200px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Fredoka', sans-serif;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #27c4f5;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #199ecf;
+}
+
+#choices-container {
+  margin-top: 1rem;
+}
+
+.choice-button {
+  display: block;
+  margin: 0.5rem auto;
+  background-color: #f5587b;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.choice-button:hover {
+  background-color: #c73e63;
+}
+
+#adventure-container {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#setup-container {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,29 +1,38 @@
+<!-- starvale.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Starvale: A Story Game</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Starvale Adventures</title>
+  <style>
+    body {
+      font-family: "Orbitron", sans-serif;
+      background: radial-gradient(circle at center, #0d0d2b, #000);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .adventure-button {
+      background: #4ff7ff;
+      color: #000;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .adventure-button:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-
-   <div id="intro">
-  <h1>Welcome to Starvale</h1>
-  <p>Enter your name to begin your adventure!</p>
-  <input type="text" id="playerName1" placeholder="Your Name" />
-  <button onclick="startGame()">Start Game</button>
-</div>
-
-    <div id="story" style="display:none;">
-      <h2 id="scene-title"></h2>
-      <p id="scene-text"></p>
-      <div id="choices"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <h1>Welcome to Starvale!</h1>
+  <p>Choose your next adventure:</p>
+  <button class="adventure-button" onclick="location.href='space-chase.html'">Space Chase!</button>
+  <button class="adventure-button" onclick="location.href='candy-jungle.html'">Candy Jungle Mystery</button>
+  <button class="adventure-button" onclick="location.href='relic-hunt.html'">Dragon Relic Hunt</button>
 </body>
 </html>
