@@ -1,0 +1,70 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #a7ffeb);
+  color: #333;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+#setup-container, #adventure-container, #choices-container {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: #ffffffaa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #80deea;
+}
+
+input[type="text"], select {
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  border: 2px solid #4db6ac;
+  border-radius: 10px;
+  background-color: #f0ffff;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4db6ac;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00897b;
+}
+
+.choice-button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  background-color: #64b5f6;
+}
+
+.choice-button:hover {
+  background-color: #1976d2;
+}
+
+.end-button {
+  margin: 10px 5px;
+  background-color: #f06292;
+}
+
+.end-button:hover {
+  background-color: #c2185b;
+}

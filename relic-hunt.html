@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starvale: The Dragon Relic Hunt</title>
+  <link rel="stylesheet" href="css/dragon-relic.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <script src="Js/dragon-relic.js" defer></script>
+</head>
+<body>
+  <h1>Starvale: The Dragon Relic Hunt</h1>
+
+  <div id="setup-container">
+    <p>What's your name, young hero?</p>
+    <input type="text" id="player-name" placeholder="Enter your name" />
+
+    <p>Choose your class:</p>
+    <select id="player-class">
+      <option value="Explorer">Explorer</option>
+      <option value="Wizard">Wizard</option>
+      <option value="Knight">Knight</option>
+      <option value="Healer">Healer</option>
+    </select>
+
+    <br><br>
+    <button id="start-button">Embark on the Hunt!</button>
+  </div>
+
+  <div id="adventure-container" style="display:none;">
+    <p>Welcome to the Dragon Relic Hunt! Your quest begins in the magical lands of Starvale...</p>
+  </div>
+
+  <div id="choices-container" style="display:none;">
+    <!-- Dynamic choices for adventure will appear here -->
+  </div>
+
+  <button id="next-button" style="display:none;">Continue</button>
+</body>
+</html>
